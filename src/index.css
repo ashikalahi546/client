@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 10px);
+    right: auto;
+} */
+
+
+/* swiper-button-prev:after, .swiper-button-next:after {
+    font-family: swiper-icons;
+    background: orange;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    padding: 5px;
+    font-size: 20px !important;
+    color: white;
+    
+} */
