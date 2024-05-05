@@ -3,25 +3,37 @@ import Main from "../layouts/Main";
 import Login from "../pages/Login";
 import Registration from "../pages/Registration";
 import Home from "../pages/Home";
-
+import ErrorPage from "../components/ErrorPage";
+import JobDetails from "../pages/JobDetails";
+import AddJob from "../pages/AddJob";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    // errorElement:
+    errorElement: <ErrorPage />,
     children: [
-        {
-          path:'/',
-          element:<Home/>
-        }
-      ,{
+      {
+        path: "/",
+        element: <Home />,
+        // loader:()=>fetch(`${import.meta.env.VITE_APP_URL}/jobs`)
+      },
+      {
         path: "/login",
         element: <Login></Login>,
       },
       {
-        path:'/registration',
-        element:<Registration></Registration>
+        path: "/registration",
+        element: <Registration></Registration>,
+      },
+      {
+        path: "/job/:id",
+        element: <JobDetails/>,
+        loader:({params})=> fetch(`${import.meta.env.VITE_APP_URL}/job/${params.id}`)
+      },
+      {
+        path:'/add-job',
+        element:<AddJob/>
       }
     ],
   },

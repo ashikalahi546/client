@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import carousel1 from '/image/carousel1.jpg'
+import carousel2 from '/image/carousel2.jpg'
+import carousel3 from '/image/carousel3.jpg'
 
 // Import Swiper styles
 import "swiper/css";
@@ -39,13 +42,13 @@ export default function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-         <Slide/>
+         <Slide image={carousel1} text='Get Your Development Projects Done in minutes'/>
         </SwiperSlide>
         <SwiperSlide>
-        <Slide/>
+        <Slide image={carousel2} text='Get Your Graphics projects Design Projects in minutes '/>
         </SwiperSlide>
         <SwiperSlide>
-          <Slide/>
+          <Slide image={carousel3} text='Start Digital Marketing Campaigns up running'/>
         </SwiperSlide>
       </Swiper>
      </div>
