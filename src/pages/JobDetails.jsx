@@ -51,7 +51,7 @@ return toast.error('Action not permitted')
     };
     // console.log(bidData)
     try {
-      const { data } = await axios.post(`http://localhost:5000/bid`, bidData);
+      const { data } = await axios.post(`${import.meta.env.VITE_APP_URL}/bid`, bidData);
       console.log(data);
     } catch (err) {
       console.log(err);
