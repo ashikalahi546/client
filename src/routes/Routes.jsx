@@ -6,6 +6,8 @@ import Home from "../pages/Home";
 import ErrorPage from "../components/ErrorPage";
 import JobDetails from "../pages/JobDetails";
 import AddJob from "../pages/AddJob";
+import MyPostedJobs from './../pages/MyPostedJob';
+import BidRequests from './../pages/BidsRequests';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        // loader:()=>fetch(`${import.meta.env.VITE_APP_URL}/jobs`)
+        loader:()=>fetch(`${import.meta.env.VITE_APP_URL}/jobs`)
       },
       {
         path: "/login",
@@ -30,10 +32,22 @@ const router = createBrowserRouter([
         path: "/job/:id",
         element: <JobDetails/>,
         loader:({params})=> fetch(`${import.meta.env.VITE_APP_URL}/job/${params.id}`)
-      },
+      } ,
+
+
+
+
       {
         path:'/add-job',
         element:<AddJob/>
+      },
+      {
+        path:'/my-posted',
+        element:<MyPostedJobs></MyPostedJobs>
+      },
+      {
+        path:'/bid-request',
+        element:<BidRequests/>
       }
     ],
   },
